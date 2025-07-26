@@ -1,0 +1,39 @@
+# ❌ Bỏ thư mục môi trường ảo
+venv/
+ENV/
+env/
+.venv/
+
+# ❌ Bỏ file cấu hình bí mật
+.env
+*.env
+
+# ❌ Bỏ file tạm / cache
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+
+# ❌ Bỏ file của IDE/editor
+.vscode/
+.idea/
+*.swp
+
+# ❌ Bỏ file hệ thống OS
+.DS_Store
+Thumbs.db
+
+# ❌ Bỏ file dữ liệu kết quả
+*.sqlite3
+*.db
+*.csv
+*.json
+
+# ❌ Bỏ checkpoint/model nếu có dùng ML
+*.ckpt
+*.pt
+*.h5
+*.pkl
+
+# ❌ Bỏ file notebook checkpoint
+.ipynb_checkpoints/
