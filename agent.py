@@ -63,7 +63,7 @@ TOOLS = {
 
 def main():
     model = genai.GenerativeModel(
-        model_name="gemini-1.5-pro",
+        model_name="gemini-1.5-flash",
         tools=tools,
     )
     chat = model.start_chat(enable_automatic_function_calling=False)
@@ -93,16 +93,8 @@ def main():
                 if fn_name in TOOLS:
                     result = TOOLS[fn_name](**fn_args)
 
-                    # Gọi Gemini lần 2 với kết quả
-                    followup = chat.send_message(
-                        {
-                            "function_call": {
-                                "name": fn_name,
-                                "args": fn_args,
-                                "response": str(result)
-                            }
-                        }
-                    )
+                    # Gửi kết quả function cho Gemini dưới dạng text
+                    followup = chat.send_message(f"Kết quả của hàm {fn_name}: {result}")
                     print("Agent:", followup.text)
                 else:
                     print(f"Không tìm thấy hàm {fn_name}")
