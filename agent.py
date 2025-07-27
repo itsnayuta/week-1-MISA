@@ -10,10 +10,10 @@ def get_weather(location: str) -> str:
     return f"Thời tiết hiện tại ở {location} là trời nắng, có mây nhẹ."
 
 def get_price_gold(date: str) -> str:
-    return f"Giá vàng ngày {date} là 75 triệu VND/lượng."
+    return f"Giá vàng ngày {date} là 7,5 triệu VND/chỉ."
 
 def get_temperature(location: str) -> str:
-    return f"Nhiệt độ hiện tại ở {location} là khoảng 33°C."
+    return f"Nhiệt độ hiện tại ở {location} là khoảng 25°C."
 
 tools = [
     {
