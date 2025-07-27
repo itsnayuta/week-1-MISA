@@ -68,7 +68,7 @@ def main():
     )
     chat = model.start_chat(enable_automatic_function_calling=False)
 
-    print("Hệ thống sẵn sàng. Nhập 'exit' hoặc 'quit' để thoát.")
+    print("Nhập 'exit' hoặc 'quit' để thoát.")
 
     while True:
         user_input = input("\nBạn: ")
